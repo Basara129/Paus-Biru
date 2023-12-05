@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'hexa';
+    src: url();
+}
+
+body {
+    /* background-color: rgb(165, 235, 235); */
+    background-image: url(/BackgroundWeb/laut.jpg);
+    background-size: 4000px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* container  */
+
+.container {
+    width: 1350px;
+    height: 100%;
+    /* border: 1px solid black; */
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* header */
+
+.header {
+    width: 100%;
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'hexa';
+}
+
+.header h1 {
+    margin-bottom: 20px;
+    font-size: 70px;
+}
+
+.header h4 {
+    font-size: 40px;
+}
+
+
+/* navbar */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(165, 235, 235);
+    margin-top: 60px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.container {
+    padding-top: 60px;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    list-style: none;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: sans-serif;
+    display: block;
+    overflow: hidden;
+    padding: 14px 30px;
+    text-transform: uppercase;
+    /* border: 1px solid black; */
+}
+
+.nav li a:hover {
+    color: red;
+}
+
+
+/* anggota */
+
+.anggota {
+    /* justify-content: center;
+    align-items: center; */
+    width: 1080px;
+    margin-top: 50px;
+    background-size: 100%;
+    overflow: auto;
+}
+
+.kartu {
+    width: 85%;
+    /* border: 1px solid black; */
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: cyan;
+    margin: 30px;
+    display: grid;
+    grid-template-areas: 'gambar gambar h4 h4 h4' 'gambar gambar p p p';
+    margin-bottom: 100px;
+}
+
+.kartu img {
+    /* margin-left: auto;
+    margin-right: auto; */
+    width: 200px;
+    grid-area: gambar;
+}
+
+.kartu h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    grid-area: h4;
+}
+
+.kartu p {
+    padding: 10px;
+    grid-area: p;
+}
+
+.kartu:nth-child(even) {
+    margin-left: auto;
+    grid-template-areas: 'h4 h4 h4 gambar gambar' 'p p p gambar gambar';
+}
+
+
+/* footer */
+
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 15px;
+}
